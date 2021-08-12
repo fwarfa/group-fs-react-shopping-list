@@ -3,9 +3,9 @@
 CREATE TABLE "shopping-list"(
 	"id" serial PRIMARY KEY,
 	"name" varchar(80),
-	"quantity" integer, 
-	"unit" varchar (20),
-	"bought" boolean default false
+	"quantity" integer,
+	"bought" BOOLEAN DEFAULT FALSE, 
+	"unit" varchar (20)
 	);
 DROP TABLE "shopping-list";
 	
