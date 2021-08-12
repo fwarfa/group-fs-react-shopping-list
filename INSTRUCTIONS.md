@@ -1,4 +1,4 @@
-# React Shopping List
+# React Shopping List!
 
 Isn't it just the worst when you come back from grocery shopping only to realize you forgot the most important thing! We're going to make a simple shopping list app to solve that problem. 
 
