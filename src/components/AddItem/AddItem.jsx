@@ -42,7 +42,8 @@ function AddItem ({postItem}) {
                 <input 
                     type="text"
                     value={newItemUnit}
-                    onChange={event => setItemUnit(event.target.value) }
+                    onChange={evt => setItemUnit(evt.target.value) }
+                    // onChange={evt => setNewCreatureOrigin(evt.target.value)}
                 >
 
                 </input>
