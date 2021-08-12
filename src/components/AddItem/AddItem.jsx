@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-function AddItem ({postItem}) {
+function AddItem ({onCreateItem}) {
 
     let [newItemName, setNewItemName] = useState('');
     let [newItemQuantity, setItemQuantity] = useState(0);
@@ -9,13 +9,15 @@ function AddItem ({postItem}) {
     const onFormSubmit = (event) => {
         event.preventDefault();
 
+        console.log('on submit', newItemName, newItemQuantity, newItemUnit);
+
         let newItem = {
             name: newItemName,
             quantity: newItemQuantity,
             unit: newItemUnit
         };
 
-        postItem(newItem);
+        onCreateItem(newItem);
 
     }
 
