@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
 
 // POST new record into the shopping-list table
 router.post('/', (req, res) => {
-   
+    console.log(req.body);
     const sqlText = `INSERT INTO "shopping-list" 
                         ( "name", "quantity", "unit" ) 
                     VALUES 
@@ -37,7 +37,7 @@ router.post('/', (req, res) => {
 });
 
 // DELETE item from shopping-list
-router.delete('/:id',  (req, res) => {
+router.delete('/single/:id',  (req, res) => {
   
     console.log(`Deleting record with id:`, req.params.id);
   
@@ -59,7 +59,7 @@ router.delete('/all',  (req, res) => {
     console.log(`Deleting all records`);
   
     let queryText = `DELETE FROM "shopping-list"`;
-    pool.query(queryText, params)
+    pool.query(queryText)
       .then(result => {
         res.sendStatus(200);
       })
