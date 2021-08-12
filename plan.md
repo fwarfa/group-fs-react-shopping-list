@@ -1,13 +1,13 @@
 # Tasks to work on
 
 ## Individiual Setup
-- [ ] npm install
+- [x] npm install
 - [ ] connect database
 
 ## Core Tasks
 
 - [ ] Endpoints/Routes
-    - [ ] GET all
+    - [x] GET all
     - [ ] POST new
     - [ ] Delete all - "clear"
     - [ ] Delete one - "remove"
@@ -22,7 +22,7 @@
 
 - [ ] Setup Componants
     - [ ] Add Item
-        - [ save item]
+        - [ ] save item
     - [ ] Shopping List
         - [ ] Group Controls
         - [ ] Item
