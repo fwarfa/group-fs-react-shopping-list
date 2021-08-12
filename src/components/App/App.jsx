@@ -1,13 +1,14 @@
 import React from 'react';
 import AddItem from '../AddItem/AddItem'
 import Header from '../Header/Header.jsx'
+import ShoppingList from '../ShoppingList/ShoppingList';
 import './App.css';
 import axios from 'axios';
 import {useState, useEffect} from 'react';
 
 function App() {
 
-    const [itemList, setItemList] = useState([]);
+    const [shoppingList, setShoppingList] = useState([]);
 
     useEffect(() => {
         fetchItems();
@@ -18,7 +19,7 @@ function App() {
           .then(response => {
             console.log('GET /list', response.data);
     
-            setItemList(response.data);
+            setShoppingList(response.data);
           }).catch(error => {
             console.log('GET /creature error', error);
           });
@@ -47,6 +48,10 @@ function App() {
             <Header />
             <AddItem 
                 onCreateItem={postItem}
+            />
+            <ShoppingList 
+                
+                shoppingList = {shoppingList}
             />
             <main>
                 <p>Under Construction...</p>
