@@ -14,11 +14,11 @@
     - [ ] PUT - "buy" on one
     - [ ] PUT - "clear buy" resets the buy buttons
 
-- [ ] Database Structure - one table
-    - [ ] id
-    - [ ] name
-    - [ ] quantity
-    - [ ] unit
+- [x] Database Structure - one table
+    - [x] id
+    - [x] name
+    - [x] quantity
+    - [x] unit
 
 - [ ] Setup Componants
     - [ ] Add Item
