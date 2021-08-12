@@ -21,14 +21,14 @@ function App() {
     
             setShoppingList(response.data);
           }).catch(error => {
-            console.log('GET /creature error', error);
+            console.log('GET /list error', error);
           });
       };
 
     const postItem = (newItem) => {
     console.log('in postItem. newItem is', newItem)
     
-    
+   
     // POST the creature to our server
     axios({
         method: 'POST',
@@ -43,6 +43,26 @@ function App() {
     })
 }
 
+    const deleteAll = () => {
+        axios.delete('/list/all')
+          .then(response => {
+            console.log('Delete /list/all', response.data);
+            fetchItems();
+          }).catch(error => {
+            console.log('DELETE /list/all error', error);
+          });
+    };
+
+    const resetAll = () => {
+        axios.put('/list/reset-all')
+          .then(response => {
+            console.log('PUT /reset-all', response.data);
+            fetchItems();
+          }).catch(error => {
+            console.log('PUT /reset-all error', error);
+          });
+    };
+
     return (
         <div className="App">
             <Header />
@@ -50,7 +70,8 @@ function App() {
                 onCreateItem={postItem}
             />
             <ShoppingList 
-                
+                deleteAll = { deleteAll }
+                resetAll = { resetAll }
                 shoppingList = {shoppingList}
             />
             <main>

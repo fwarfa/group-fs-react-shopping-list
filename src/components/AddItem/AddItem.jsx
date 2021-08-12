@@ -18,6 +18,9 @@ function AddItem ({onCreateItem}) {
         };
 
         onCreateItem(newItem);
+        setNewItemName('');
+        setItemQuantity(0);
+        setItemUnit('');
 
     }
 
