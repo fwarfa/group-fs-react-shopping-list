@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-function AddItem () {
+function AddItem ({postItem}) {
 
     let [newItemName, setNewItemName] = useState('');
     let [newItemQuantity, setItemQuantity] = useState(0);
@@ -14,6 +14,8 @@ function AddItem () {
             quantity: newItemQuantity,
             unit: newItemUnit
         };
+
+        postItem(newItem);
 
     }
 

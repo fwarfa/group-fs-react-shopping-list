@@ -11,3 +11,5 @@ DROP TABLE "shopping-list";
 	
 INSERT INTO "shopping-list"(name, quantity, unit)
 VALUES ('Example', 10, '5 cups');
+
+Select * from "shopping-list";
