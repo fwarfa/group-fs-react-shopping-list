@@ -7,7 +7,7 @@ const pool = require('../modules/pool.js');
 //GET all records from table...
 router.get('/', (req, res) => {
     // Get all the items from the shopping-list table
-    const sqlText = `SELECT "id", "name", "quanity", "unit" FROM "shopping-list"`;
+    const sqlText = `SELECT "id", "name", "quantity", "unit" FROM "shopping-list"`;
     pool.query(sqlText)
         .then((result) => {
             res.send(result.rows);
@@ -22,7 +22,7 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
    
     const sqlText = `INSERT INTO "shopping-list" 
-                        ( "name", "quanity", "unit" ) 
+                        ( "name", "quantity", "unit" ) 
                     VALUES 
                         ( $1, $2, $3 )
                     `;
