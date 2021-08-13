@@ -62,6 +62,17 @@ function App() {
             console.log('PUT /reset-all error', error);
           });
     };
+    const buyButton = (id) => {
+      axios.put(`/list/buy-button/${id}`)
+        .then(response => {
+          console.log('PUT /buy-button', response.data);
+          fetchItems();
+        }).catch(error => {
+          console.log('PUT /buy-button error', error);
+        });
+    };
+
+
 
     return (
         <div className="App">
@@ -73,6 +84,7 @@ function App() {
                 deleteAll = { deleteAll }
                 resetAll = { resetAll }
                 shoppingList = {shoppingList}
+                buyButton={buyButton}
             />
             <main>
                 <p>Under Construction...</p>

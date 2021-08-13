@@ -1,29 +1,29 @@
 # Tasks to work on
 
 ## Individiual Setup
-- [ ] npm install
-- [ ] connect database
+- [x] npm install
+- [x] connect database
 
 ## Core Tasks
 
 - [ ] Endpoints/Routes
-    - [ ] GET all
-    - [ ] POST new
-    - [ ] Delete all - "clear"
-    - [ ] Delete one - "remove"
-    - [ ] PUT - "buy" on one
-    - [ ] PUT - "clear buy" resets the buy buttons
+    - [x] GET all
+    - [x] POST new
+    - [x] Delete all - "clear"
+    - [x] Delete one - "remove"
+    - [x] PUT - "buy" on one
+    - [x] PUT - "clear buy" resets the buy buttons
 
 - [ ] Database Structure - one table
-    - [ ] id
-    - [ ] name
-    - [ ] quantity
-    - [ ] unit
+    - [x] id
+    - [x] name
+    - [x] quantity
+    - [x] unit
 
 - [ ] Setup Componants
-    - [ ] Add Item
+    - [x] Add Item
         - [ save item]
-    - [ ] Shopping List
+    - [x] Shopping List
         - [ ] Group Controls
         - [ ] Item
             - [ ] buy button
