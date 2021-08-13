@@ -70,7 +70,7 @@ router.delete('/all',  (req, res) => {
   });
 
 // POST new record into the shopping-list table
-router.put('/:id', (req, res) => {
+router.put('/buy-button/:id', (req, res) => {
    
     const sqlText = `UPDATE "shopping-list" 
                     SET "bought" = true 
@@ -100,5 +100,7 @@ router.put('/reset-all', (req, res) => {
             res.sendStatus(500);
         });
 });
+
+
 
 module.exports = router;
