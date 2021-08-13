@@ -72,6 +72,15 @@ function App() {
         });
     };
 
+    const removeButton = () => {
+      axios.delete(`/list/single/${id}`)
+        .then(response => {
+          console.log('PUT /single', response.data);
+          fetchItems();
+        }).catch(error => {
+          console.log('PUT /single error', error);
+        });
+
 
 
     return (
@@ -85,6 +94,7 @@ function App() {
                 resetAll = { resetAll }
                 shoppingList = {shoppingList}
                 buyButton={buyButton}
+                removeButton= {removeButton}
             />
             <main>
                 <p>Under Construction...</p>

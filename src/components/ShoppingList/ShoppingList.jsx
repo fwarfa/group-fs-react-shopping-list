@@ -1,10 +1,20 @@
 import {useState} from 'react';
 import GroupControls from '../GroupControls/GroupControls';
 
-function ShoppingList({ deleteAll, resetAll, shoppingList, buyButton }) {
+function ShoppingList({ deleteAll, resetAll, shoppingList, buyButton, removeButton }) {
     
+
+
+
+
     //create a variable id & SetID. Have it equal it to the useState
     let [id , setID] = useState('')
+
+    function setRemoveButton(id){
+
+        removeButton(id)
+    }
+
 
     //create a function to pass through buyButton
     //pass through ID into function
@@ -26,7 +36,7 @@ function ShoppingList({ deleteAll, resetAll, shoppingList, buyButton }) {
                         //in order to run onClick run a function with a function with the id
                         <li key= {item.id}>{item.name} {item.quantity} {item.unit}
                             <button onClick={() => {setBuyButton(item.id)}}>Buy</button>
-                            <button >remove</button>
+                            <button onClick= {() => {setRemoveButton(item.id)}}>remove</button>
                         </li>
                         
                     )
