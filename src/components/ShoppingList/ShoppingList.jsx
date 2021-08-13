@@ -13,7 +13,7 @@ function ShoppingList ({ deleteAll, resetAll, shoppingList }) {
             <ul>
                 {shoppingList.map(item => {
                     return (
-                        <li>{item.name} {item.quantity} {item.unit}</li>
+                        <li key= {item.id}>{item.name} {item.quantity} {item.unit}</li>
                     )
                 })}
 
